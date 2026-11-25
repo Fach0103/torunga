@@ -1,0 +1,72 @@
+{
+  "server": {
+    "defaultPort": 3000,
+    "defaultBaseUrl": "http://localhost:3000",
+    "uploadsRoute": "/uploads",
+    "uploadsDir": "uploads"
+  },
+  "uploads": {
+    "profilesFolder": "profiles",
+    "chatFolder": "chat",
+    "maxFileSizeMB": 5
+  },
+  "auth": {
+    "tokenExpiresIn": "7d",
+    "saltRounds": 10
+  },
+  "matches": {
+    "candidatesLimit": 20,
+    "swipeRight": "right",
+    "swipeLeft": "left",
+    "publicFields": "name bio age interests profileImage",
+    "friendFields": "name profileImage bio age"
+  },
+  "sockets": {
+    "events": {
+      "connection": "connection",
+      "disconnect": "disconnect",
+      "sendMessage": "send_message",
+      "receiveMessage": "receive_message",
+      "messageSent": "message_sent",
+      "typing": "typing",
+      "userTyping": "user_typing",
+      "markRead": "mark_read",
+      "messagesRead": "messages_read"
+    },
+    "messageTypes": {
+      "text": "text",
+      "image": "image"
+    }
+  },
+  "routes": {
+    "health": "/api/health",
+    "register": "/api/auth/register",
+    "login": "/api/auth/login",
+    "profile": "/api/users/profile",
+    "candidates": "/api/matches/candidates",
+    "swipe": "/api/matches/swipe",
+    "friends": "/api/matches/friends",
+    "conversations": "/api/chat/conversations",
+    "messages": "/api/chat/messages/:friendId",
+    "chatUpload": "/api/chat/upload"
+  },
+  "messages": {
+    "serverRunning": "Servidor Torunga operativo",
+    "missingFields": "Faltan campos obligatorios",
+    "emailExists": "El correo ya esta registrado",
+    "invalidCredentials": "Credenciales invalidas",
+    "userNotFound": "Usuario no encontrado",
+    "accountDeleted": "Cuenta eliminada correctamente",
+    "noToken": "Token no proporcionado",
+    "invalidToken": "Token invalido o expirado",
+    "onlyImages": "Solo se permiten archivos de imagen",
+    "selfSwipeError": "No puedes interactuar contigo mismo",
+    "targetNotFound": "Usuario objetivo no encontrado",
+    "invalidDirection": "Direccion de swipe invalida",
+    "notFriendsError": "Solo puedes enviar mensajes a tus amigos",
+    "emptyMessageError": "El mensaje debe contener texto o una imagen",
+    "noImageProvided": "No se proporciono ninguna imagen",
+    "socketAuthRequired": "Autenticacion requerida en WebSocket",
+    "socketInvalidToken": "Token invalido en WebSocket"
+  }
+}
